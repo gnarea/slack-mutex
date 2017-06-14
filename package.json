@@ -1,0 +1,35 @@
+{
+  "name": "slack-mutex",
+  "version": "1.0.0",
+  "description": "Reentrant mutex for shared resources over Slack",
+  "keywords": [
+    "slack",
+    "webtask",
+    "mutex"
+  ],
+  "author": "Gustavo Narea",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "babel-node spec/run.js",
+    "build": "babel --out-dir build/ src/",
+    "serve": "npm run build && wt serve --parse-body build/webtask.js",
+    "deploy": "wt create --bundle src/webtask.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "jasmine": "^2.6.0",
+    "wt-cli": "^6.1.0"
+  },
+  "engines": {
+    "node": ">=6.11"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0"
+  }
+}
