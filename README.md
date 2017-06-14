@@ -11,3 +11,9 @@ npm run deploy -- --name slack-mutex --secret resources=printer,projector,fussba
 You can then take the Webtask URL to configure the command on Slack.
 
 Once the command is installed, you can run `/mutex help` to learn more about the operations you can perform.
+
+To test locally, run `wt server` via `npm run serve`; e.g.:
+
+```bash
+npm run serve -- --secret resources=printer,projector,fussball
+```
