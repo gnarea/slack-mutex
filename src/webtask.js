@@ -1,3 +1,4 @@
+import "core-js";
 import {Mutex, LockingError} from "./mutex";
 import {Promise} from "bluebird";
 
