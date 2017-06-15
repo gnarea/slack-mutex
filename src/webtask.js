@@ -28,7 +28,7 @@ module.exports = (context, cb) => {
     }
 
     responsePromised
-        .then((msg) => {cb(null, msg);})
+        .then((msg) => {cb(null, {"text": msg});})
         .catch((error) => {cb(error, null);});
 };
 

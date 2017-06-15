@@ -204,7 +204,10 @@ function makeCommandContext(
 
 
 function testResult(context, done, callback) {
-    testWebtaskResult(webtask, context, done, callback);
+    testWebtaskResult(webtask, context, done, (result) => {
+        expect(result.text).toBeDefined();
+        callback(result.text);
+    });
 }
 
 
